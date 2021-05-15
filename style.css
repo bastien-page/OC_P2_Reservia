@@ -1,5 +1,6 @@
 *{margin:0;padding:0;outline:0;font-size:1em;font-weight:normal;font-style:normal;border:0;text-decoration:none;list-style-type:none;box-sizing: border-box;}
 
+
 html {
 
     --colorprimary : #0065FC;
@@ -11,10 +12,13 @@ html {
 }
 
 body {
-
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
+
 }
 
 h1 {
@@ -37,6 +41,12 @@ a:visited {
     color: var(--colorpolice)
 }
 
+.container {
+
+    margin : 3.75rem ;
+    max-width: 1500px;
+}
+
 /* FOOTER */
 
 footer {
@@ -44,6 +54,7 @@ footer {
     justify-content: center;
     background-color: var(--colorbg);
     height: 200px;
+    flex: 1 0 auto;
 
 }
 
@@ -60,3 +71,21 @@ footer li {
     margin: 0.62rem 0;
 }
 
+
+@media screen and (max-width :800px) {
+    
+    footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+    .footer__bloc {
+        margin-left: 3.75rem ;
+        width: 100%;
+        margin-top: 2rem;
+
+    }
+    footer h3 {
+        margin-top: 0;
+    }
+}

@@ -2,13 +2,12 @@
 
 
 html {
-
     --colorprimary : #0065FC;
     --colorsecondary : #DEEBFF;
     --colorbg : #F2F2F2;
     --colorshadow : #d8d8d8;
     --colorpolice : black;
-
+    
 }
 
 body {
@@ -18,7 +17,8 @@ body {
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
-
+    color: var(--colorpolice);
+    
 }
 
 h1 {
@@ -38,14 +38,49 @@ h3 {
 }
 
 a:visited {
-    color: var(--colorpolice)
+    color: var(--colorpolice);
 }
 
 .container {
-
     margin : 3.75rem ;
     max-width: 1500px;
 }
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+header img {
+    width: 120px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav li {
+    margin-right: 60px;
+}
+
+
+.header__nav a:hover {
+    color : var(--colorprimary);
+    border-top: 2px solid var(--colorprimary);
+}
+
+#sign {
+        font-weight: 700;
+        color: var(--colorprimary);
+    }
+
 
 /* FOOTER */
 

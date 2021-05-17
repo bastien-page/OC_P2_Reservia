@@ -1,14 +1,18 @@
+/* RESET */
+
 *{margin:0;padding:0;outline:0;font-size:1em;font-weight:normal;font-style:normal;border:0;text-decoration:none;list-style-type:none;box-sizing: border-box;}
 
+/* VARIABLES */
 
 html {
     --colorprimary : #0065FC;
     --colorsecondary : #DEEBFF;
     --colorbg : #F2F2F2;
     --colorshadow : #d8d8d8;
-    --colorpolice : black;
-    
+    --colorpolice : black;  
 }
+
+/* GENERAL*/
 
 body {
     display: flex;
@@ -17,28 +21,7 @@ body {
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
-    color: var(--colorpolice);
-    
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-
-}
-
-a:visited {
-    color: var(--colorpolice);
+    color: var(--colorpolice);   
 }
 
 .container {
@@ -46,40 +29,194 @@ a:visited {
     max-width: 1500px;
 }
 
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+
+a:visited {
+    color: var(--colorpolice);
+}
+
+
 /* HEADER */
 
 header {
     display: flex;
     justify-content: space-between;
 }
+
 header img {
     width: 120px;
 }
 
 .header__nav {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .header__nav ul {
     display: flex;
-    align-items: center;
 }
 
 .header__nav li {
-    margin-right: 60px;
-}
-
-
-.header__nav a:hover {
-    color : var(--colorprimary);
-    border-top: 2px solid var(--colorprimary);
+    margin-right: 3.75rem;
+    
 }
 
 #sign {
-        font-weight: 700;
-        color: var(--colorprimary);
-    }
+    font-weight: 700;
+    color: var(--colorprimary);
+}
+
+/* CHANGEMENT SURVOL LINK */
+
+.header__nav a:hover {
+    color : var(--colorprimary);
+    border-top: 3px solid var(--colorprimary);
+    padding-top: 2rem;
+}
+
+
+/* SECTION SEARCH*/
+
+.search {
+    margin-top: 2rem;
+}
+
+.search__bar {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.search__bar p {
+    background-color: var(--colorbg) ;
+    height: 50px;
+    width: 50px;
+    border : solid 1px var(--colorbg);
+    border-radius: 15px 0 0 15px;
+}
+
+.search__bar p i {
+    padding: 17px 19px; 
+}
+
+.search__bar input {
+    height: 50px;
+    padding: 1rem;
+    font-weight: 600;
+    border : solid 1px var(--colorbg);
+}
+
+.search__bar .btn {
+    background-color: var(--colorprimary);
+    color: var(--colorbg);
+    font-weight: 500;
+    height: 50px;
+    width: 120px;
+    border-radius: 0 15px 15px 0;
+}
+
+/* CHANGEMENT SURVOL BTN */
+
+.btn:hover {
+    background-color: var(--colorsecondary);
+    color: var(--colorprimary);    
+}
+
+/* FILTRES */
+
+.filter__bloc {
+    display: flex;
+    align-items: center;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 3px solid var(--colorbg);
+    border-left: none;
+    border-radius: 30px ;
+    margin: 0.5rem 1.2rem;
+    height: 50px;   
+}
+
+.filter p {
+    background-color: var(--colorsecondary) ;
+    border : solid 2px var(--colorsecondary);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+   
+}
+
+.filter i {
+    display: flex;
+    justify-content: center;
+    color: var(--colorprimary);
+    line-height: 50px;
+}
+
+.filter h3 {
+    padding : 0 1rem;
+    line-height: 50px;
+    height: 50px;
+}
+
+/* CHANGEMENT SURVOL FILTRES */
+
+.filter:hover {
+    background-color: var(--colorsecondary);
+    border: 3px solid var(--colorprimary);
+    border-left: none;
+    color: var(--colorprimary);
+}
+
+.filter:hover p {
+    background-color: var(--colorprimary) ;
+    border: solid 2px var(--colorprimary);
+}
+
+.filter:hover i {
+    color: var(--colorsecondary);
+}
+
+/* INFO */
+
+.info {
+    display: flex;
+    align-items: center;
+    margin : 1.5rem 0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--colorbg);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin-right: 1rem;
+}
+
+.info i {
+    color: var(--colorprimary);
+    font-size: 12px;
+}
 
 
 /* FOOTER */
@@ -107,6 +244,9 @@ footer li {
 }
 
 
+/* MEDIA QUERIES */
+
+
 @media screen and (max-width :800px) {
     
     footer {
@@ -123,4 +263,17 @@ footer li {
     footer h3 {
         margin-top: 0;
     }
+
+    header {
+        flex-direction: column;
+    }
+    
+    .header__nav {
+        justify-content: center;
+    }
+    
+    .header__nav li {
+        margin: 1rem ;
+    } 
+    
 }

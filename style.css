@@ -43,7 +43,11 @@ h2 {
 h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    
+}
+
+h4{
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 a:visited {
@@ -222,14 +226,21 @@ header img {
     font-size: 12px;
 }
 
+/* SECTION HOME_TOP */
 
-/* SECTION HOME */
+.home_top {
+    display: flex;
+    justify-content: space-between;
+}
 
-.home {
+.home , .tophome {
     background-color: var(--colorbg);
     border-radius: 20px;
     padding: 2rem;
 }
+
+/* SECTION HOME */
+
 
 .grid {
     display: grid;
@@ -251,7 +262,7 @@ header img {
     color: var(--colorprimary);
 } */
 
-/* CARD */
+/* CARD HOME */
 
 .card {
     display: flex;
@@ -276,7 +287,7 @@ header img {
 }
 
 .card__title, .card__price, .card__grade {
-    margin : 2px 0 0 15px
+    padding : 2px 0 0 15px;
 }
 
 .card__grade {
@@ -292,6 +303,69 @@ header img {
 .card:hover{
     transform: scale(1.1);
 }
+
+
+
+/* SECTION TOP */
+
+.tophome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tophome__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tophome__title i {
+    font-size: 1.5rem;
+}
+
+/* CARD TOP */
+
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 340px;
+    height: 145px;
+}
+
+.top img {
+    width: 130px;
+    height: 135px;
+    border-radius: 20px 0 0 20px;
+
+}
+.top__info {
+    display: flex;
+    flex-direction: column;
+    padding : 5px;
+    padding-left: 15px;
+    height: 145px;
+}
+
+.top__title, .top__price {
+    padding: 5px 0 0 0;
+    
+}
+
+.top__price {
+    flex-grow: 1;
+}
+
+.top__grade {
+    font-size: 0.8rem;
+    color : var(--colorbg);
+    padding-bottom: 10px;
+}
+
+
+
+
 
 
 /* FOOTER */

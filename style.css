@@ -50,6 +50,10 @@ a:visited {
     color: var(--colorpolice);
 }
 
+span {
+    font-weight: bold;
+}
+
 
 /* HEADER */
 
@@ -216,6 +220,77 @@ header img {
 .info i {
     color: var(--colorprimary);
     font-size: 12px;
+}
+
+
+/* SECTION HOME */
+
+.home {
+    background-color: var(--colorbg);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    column-gap: 1.8rem;
+    row-gap: 1.8rem;
+}
+
+.home__title {
+    grid-column : 1/ span 3;
+}
+
+.home__footer {
+    grid-column : 1/ span 3;
+}
+
+/* 
+.home__footer:hover{
+    color: var(--colorprimary);
+} */
+
+/* CARD */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 250px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 5px 5px 10px 5px;
+    box-shadow: 10px 10px 10px var(--colorshadow);
+    transition: 0.5s ease-out;
+}
+
+.card img {
+    width: 240px;
+    height: 120px;
+    border-radius: 20px 20px 0 0;
+}
+
+.img {
+    object-fit: cover;
+}
+
+.card__title, .card__price, .card__grade {
+    margin : 2px 0 0 15px
+}
+
+.card__grade {
+    font-size: 13px;
+    color : var(--colorbg)
+}
+
+.good {
+    color : var(--colorprimary)
+}
+
+/* CHANGEMENT SURVOL CARD */
+.card:hover{
+    transform: scale(1.1);
 }
 
 

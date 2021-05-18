@@ -17,7 +17,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
@@ -26,7 +26,7 @@ body {
 
 .container {
     margin : 3.75rem ;
-    max-width: 1500px;
+    max-width: 1400px;
 }
 
 h1 {
@@ -363,9 +363,85 @@ header img {
     padding-bottom: 10px;
 }
 
+/* EN COURS  */
+
+.activities {
+    display: flex;
+    margin-top: 2rem ;
+
+}
+
+.grid-big {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows:  60px 160px repeat(4,30px) 160px;
+    column-gap: 2.4rem;  
+} 
 
 
+.activity__title {
+    grid-area: 1 / span 4;
+}
 
+.activity {
+    width: 300px;
+    height: 250px;
+}
+
+.activity img {
+    width: 290px;
+    height: 195px;
+}
+
+.big {
+    width: 300px;
+    height: 440px;
+}
+
+.big img {
+    width: 290px;
+    height: 385px ;
+}
+
+.small {
+    width: 300px;
+    height: 160px;
+}
+
+.small img {
+    width: 290px;
+    height: 105px;
+} 
+
+.activity h4 {
+    padding: 1rem;
+}
+
+/* PLACEMENT DES CARTES */
+
+#vieuxPort {
+    grid-row: 2 / span 7;
+}
+
+#fortDePomegues {
+    grid-row: 2 / span 4;
+}
+
+#ilesDuFrioul {
+    grid-row: 7;
+}
+
+#parcNationalDesCalanques {
+    grid-row: 2 / span 7;
+}
+
+#notreDameDeLaGarde {
+    grid-row: 2;
+}
+
+#parcLonchamp {
+    grid-row: 4 / span 7;
+}
 
 
 /* FOOTER */
@@ -375,7 +451,8 @@ footer {
     justify-content: center;
     background-color: var(--colorbg);
     height: 200px;
-    flex: 1 0 auto;
+    /* flex: 1 0 auto; */
+
 
 }
 

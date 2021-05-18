@@ -488,13 +488,46 @@ footer li {
         margin-bottom: 2rem;
     }
     
-
     .top {
         margin-top: 1rem;
     } 
+    .activities {
+        justify-content: center;
+    }
+    .grid-big {
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: 60px repeat(2,160px);
+        grid-gap : 2rem;
+    }
+    .activity__title {
+        grid-area: 1 / span 3;
+    }
+
+    .big, .activity {
+            width: 300px;
+            height: 160px;
+        }
+
+    .big img, .activity img {
+            width: 290px;
+            height: 105px;
+    }
+    #vieuxPort, #fortDePomegues, #ilesDuFrioul, #parcNationalDesCalanques, #notreDameDeLaGarde, #parcLonchamp {
+        grid-area: auto;
+    }
 
 }
 
+@media screen and (max-width :1000px){
+    .grid-big {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: 60px repeat(3,160px);
+        grid-gap : 2rem;
+    }
+    .activity__title {
+        grid-area: 1 / span 2;
+    }
+}
 
 @media screen and (max-width :800px) {
     
@@ -532,6 +565,25 @@ footer li {
     
 }
 
+@media screen and (max-width :700px){
+    .grid-big {
+        grid-template-columns: 340px;
+        grid-template-rows: 60px repeat(6,200px);
+        grid-gap : 2rem;
+    }
+    .activity__title {
+        grid-area: 1 ;
+    }
+    .activity {
+        width: 340px;
+        height: 200px;
+    }
+    .activity img {
+        width: 330px;
+        height: 150px;
+    }
+}
+
 @media screen and (max-width :600px) {
 
     .grid {
@@ -543,6 +595,7 @@ footer li {
     }
     .card {
         width: 340px;
+        
     }
     .card img {
         width: 330px;

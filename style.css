@@ -17,7 +17,6 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
@@ -25,8 +24,8 @@ body {
 }
 
 .container {
-    margin : 3.75rem ;
-    max-width: 1400px;
+    margin : 3.75rem auto;
+    /* max-width: 1800px; */
 }
 
 h1 {
@@ -80,7 +79,7 @@ header img {
 }
 
 .header__nav li {
-    margin-right: 3.75rem;
+    margin-right: 1.6rem;
     
 }
 
@@ -249,11 +248,7 @@ header img {
     row-gap: 1.8rem;
 }
 
-.home__title {
-    grid-column : 1/ span 3;
-}
-
-.home__footer {
+.home__title, .home__footer {
     grid-column : 1/ span 3;
 }
 
@@ -312,6 +307,8 @@ header img {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 1rem;
+    
 }
 
 .tophome__title {
@@ -451,8 +448,7 @@ footer {
     justify-content: center;
     background-color: var(--colorbg);
     height: 200px;
-    /* flex: 1 0 auto; */
-
+    flex: 1 0 auto;
 
 }
 
@@ -472,12 +468,41 @@ footer li {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width :1400px) {
+
+    .container {
+        margin : 2rem;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 250px);
+          
+    }
+    .home__title, .home__footer {
+        grid-column : 1/ span 2;
+    }
+    .home_top {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .home , .tophome {
+        margin-bottom: 2rem;
+    }
+    
+
+    .top {
+        margin-top: 1rem;
+    } 
+
+}
+
 
 @media screen and (max-width :800px) {
     
     footer {
         flex-direction: column;
         justify-content: flex-start;
+        height: auto;
+        padding-bottom: 3rem;
         
     }
     .footer__bloc {
@@ -501,5 +526,29 @@ footer li {
     .header__nav li {
         margin: 1rem ;
     } 
+    .tophome {
+        order : -1;
+    }
     
 }
+
+@media screen and (max-width :600px) {
+
+    .grid {
+        grid-template-columns: 340px;
+
+    }
+    .home__title, .home__footer {
+        grid-column : 1;
+    }
+    .card {
+        width: 340px;
+    }
+    .card img {
+        width: 330px;
+    }
+    .home {
+        background-color: white
+    }
+    
+    

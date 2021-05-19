@@ -20,14 +20,12 @@ body {
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
-    color: var(--colorpolice);  
-    
+    color: var(--colorpolice);   
 }
 
 .container {
     margin : 3.75rem auto;
-    max-width: 1600px;
-   
+    max-width: 1600px;  
 }
 
 h1 {
@@ -138,6 +136,10 @@ header img {
     border-radius: 0 15px 15px 0;
 }
 
+.search__bar input:focus {
+    border : solid 2px var(--colorprimary);
+}
+
 
 
 .btn--small {
@@ -185,8 +187,7 @@ header img {
     border : solid 2px var(--colorsecondary);
     border-radius: 50%;
     height: 50px;
-    width: 50px;
-   
+    width: 50px;  
 }
 
 .filter i {
@@ -205,19 +206,9 @@ header img {
 /* CHANGEMENT SURVOL FILTRES */
 
 .filter:hover {
-    background-color: var(--colorsecondary);
-    border: 3px solid var(--colorprimary);
+    border: 3px solid var(--colorsecondary);
     border-left: none;
     color: var(--colorprimary);
-}
-
-.filter:hover p {
-    background-color: var(--colorprimary) ;
-    border: solid 2px var(--colorprimary);
-}
-
-.filter:hover i {
-    color: var(--colorsecondary);
 }
 
 /* INFO */
@@ -271,10 +262,10 @@ header img {
     grid-column : 1/ span 3;
 }
 
-/* 
+
 .home__footer:hover{
-    color: var(--colorprimary);
-} */
+    text-decoration: underline;
+} 
 
 /* CARD HOME */
 
@@ -283,7 +274,6 @@ header img {
     flex-direction: column;
     background-color: white;
     width: 250px;
-    height: 200px;
     border-radius: 25px;
     padding: 5px 5px 10px 5px;
     box-shadow: 10px 10px 10px var(--colorshadow);
@@ -314,9 +304,9 @@ header img {
 }
 
 /* CHANGEMENT SURVOL CARD */
+
 .card:hover{
-    transform: scale(1.1);
-    
+    transform: scale(1.1);  
 }
 
 
@@ -664,15 +654,15 @@ footer a:hover{
 
     /* RESPONSIVE SECTION HOME */
     .grid {
-        grid-template-columns: 320px;
-        
+        grid-template-columns: 320px;   
     }
+
     .home__title, .home__footer {
         grid-column : 1;
     }
+
     .card {
-        width: 320px;
-          
+        width: 320px; 
     }
     
     .home {
@@ -683,9 +673,9 @@ footer a:hover{
     
     .grid-big {
         grid-template-columns: 320px;
-        grid-template-rows: 60px repeat(6,200px);
         grid-gap : 2rem;
     }
+
     .activity__title {
         grid-area: 1 ;
     }
@@ -707,6 +697,7 @@ footer a:hover{
     .btn--small{
         display: unset;
     }
+
     .tophome {
         margin: 0;
         border-radius: 0;

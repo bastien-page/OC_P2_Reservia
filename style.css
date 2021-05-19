@@ -133,13 +133,26 @@ header img {
     color: var(--colorbg);
     font-weight: 500;
     height: 50px;
-    width: 120px;
+    padding: 0.5rem;
     border-radius: 0 15px 15px 0;
+}
+
+
+
+.btn--small {
+    display: none;
+    background-color: var(--colorprimary);
+    color: var(--colorbg);
+    font-weight: 500;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-left: -1rem;
 }
 
 /* CHANGEMENT SURVOL BTN */
 
-.btn:hover {
+.btn:hover, .btn--small:hover {
     background-color: var(--colorsecondary);
     color: var(--colorprimary);    
 }
@@ -466,9 +479,10 @@ footer {
     justify-content: center;
     background-color: var(--colorbg);
     height: 200px;
-    flex: 1 0 auto;
+    
 
 }
+
 
 .footer__bloc {
     width: 30%;
@@ -694,3 +708,17 @@ footer a:hover{
     }
     
 }
+
+@media screen and (max-width :500px){
+   
+    .btn {
+        display: none;
+    }
+
+    .btn--small{
+        display: unset;
+    }
+
+}
+
+

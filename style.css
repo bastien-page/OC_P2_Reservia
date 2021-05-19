@@ -26,6 +26,7 @@ body {
 
 .container {
     margin : 3.75rem auto;
+    max-width: 1600px;
    
 }
 
@@ -475,17 +476,17 @@ header img {
 /* FOOTER */
 
 footer {
-    display: flex;
-    justify-content: center;
     background-color: var(--colorbg);
     height: 200px;
+    display: flex;
+    justify-content: center;
     
-
 }
 
 
 .footer__bloc {
     width: 30%;
+   
 }
 
 footer h3 {
@@ -502,7 +503,7 @@ footer a:hover{
 }
 
 
-/* MEDIA QUERIES */
+/*************** MEDIA QUERIES **************/
 
 @media screen and (max-width :1400px) {
 
@@ -528,6 +529,7 @@ footer a:hover{
 
     /* RESPONSIVE SECTION TOP */
     .tophome {
+        margin: 2rem 0;
         order: -1;
     }
     .topMedia {
@@ -645,11 +647,12 @@ footer a:hover{
         justify-content: flex-start;
         height: auto;
         padding-bottom: 3rem;
+        margin-top: 2rem;
         
     }
     .footer__bloc {
         margin-left: 3.75rem ;
-        width: 100%;
+        width: 300px;
         margin-top: 2rem;
 
     }
@@ -706,11 +709,8 @@ footer a:hover{
         border-radius: 20px 0 0 20px;
     
     }
-    
-}
+    /* TEST  */
 
-@media screen and (max-width :500px){
-   
     .btn {
         display: none;
     }
@@ -718,7 +718,23 @@ footer a:hover{
     .btn--small{
         display: unset;
     }
+    .tophome {
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    .container{
+        margin: 2rem 0;
+    }
 
+    header, .search {
+        width: 100%;
+        margin : 0 1rem;
+    }
+
+    .search__bar {
+        justify-content: center;
+    }
 }
 
 

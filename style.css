@@ -20,12 +20,13 @@ body {
     font-family: "Raleway";
     font-size: 16px;
     font-weight: 400;
-    color: var(--colorpolice);   
+    color: var(--colorpolice);  
+    
 }
 
 .container {
     margin : 3.75rem auto;
-    /* max-width: 1800px; */
+   
 }
 
 h1 {
@@ -148,6 +149,10 @@ header img {
 .filter__bloc {
     display: flex;
     align-items: center;
+}
+
+.filters{
+    display: flex;
 }
 
 .filter {
@@ -297,6 +302,7 @@ header img {
 /* CHANGEMENT SURVOL CARD */
 .card:hover{
     transform: scale(1.1);
+    
 }
 
 
@@ -317,7 +323,9 @@ header img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}.topMedia {
+
+}
+.topMedia {
     display: flex;
     flex-direction: column;
 }
@@ -329,12 +337,16 @@ header img {
 /* CARD TOP */
 
 .top {
-    display: flex;
-    flex-direction: row;
     width: 340px;
     height: 145px;
     margin: 1rem 0;
 }
+
+.top a {
+    display: flex;
+    flex-direction: row;
+}
+
 
 .top img {
     width: 130px;
@@ -391,8 +403,9 @@ header img {
 }
 
 .activity img {
-    width: 290px;
+    width: 295px;
     height: 195px;
+    
 }
 
 .big {
@@ -401,7 +414,7 @@ header img {
 }
 
 .big img {
-    width: 290px;
+    width: 295px;
     height: 385px ;
 }
 
@@ -411,7 +424,7 @@ header img {
 }
 
 .small img {
-    width: 290px;
+    width: 295px;
     height: 105px;
 } 
 
@@ -468,6 +481,10 @@ footer h3 {
 
 footer li {
     margin: 0.62rem 0;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
 
 
@@ -531,7 +548,7 @@ footer li {
         }
 
     .big img, .activity img {
-            width: 290px;
+            width: 295px;
             height: 105px;
     }
     #vieuxPort, #fortDePomegues, #ilesDuFrioul, #parcNationalDesCalanques, #notreDameDeLaGarde, #parcLonchamp {
@@ -542,6 +559,24 @@ footer li {
 
 @media screen and (max-width :1100px){
 
+    /* RESPONSIVE FILTERS */
+
+    .filter__bloc {
+        flex-direction: column;   
+    }
+    .filter__title {
+        align-self: flex-start;
+
+    }
+    .filters{
+        flex-wrap: wrap;
+    }
+    .filter{
+        margin-left: 0;
+    }
+
+
+    /* RESPONSIVE SECTION HOME*/
 
     .grid {
         grid-template-columns: repeat(2, 250px);
@@ -567,6 +602,9 @@ footer li {
 
 @media screen and (max-width :800px) {
     
+
+    /* RESPONSIVE HEADER */
+
     header {
         flex-direction: column;
     }
@@ -578,6 +616,13 @@ footer li {
     .header__nav li {
         margin: 1rem ;
     } 
+
+    .header__nav a:hover {
+        color : var(--colorprimary);
+        border-top: none;
+        border-bottom: 3px solid var(--colorprimary);
+        padding-bottom: 1rem;
+    }
     
     /* RESPONSIVE FOOTER  */
 
@@ -605,14 +650,14 @@ footer li {
     /* RESPONSIVE SECTION HOME */
     .grid {
         grid-template-columns: 340px;
-
+        
     }
     .home__title, .home__footer {
         grid-column : 1;
     }
     .card {
         width: 340px;
-        
+          
     }
     .card img {
         width: 330px;
@@ -620,9 +665,9 @@ footer li {
     .home {
         background-color: white
     }
-
+    
     /* RESPONSIVE SECTION ACTIVITY */
-
+    
     .grid-big {
         grid-template-columns: 340px;
         grid-template-rows: 60px repeat(6,200px);
@@ -636,7 +681,16 @@ footer li {
         height: 200px;
     }
     .activity img {
-        width: 330px;
+        width: 335px;
         height: 150px;
     }
+
+    /* RESPONSIVE TOP */
+    .top img {
+        width: 130px;
+        height: 135px;
+        border-radius: 20px 0 0 20px;
+    
+    }
+    
 }

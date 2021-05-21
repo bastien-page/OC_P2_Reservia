@@ -49,6 +49,10 @@ h4{
     font-weight: 600;
 }
 
+a {
+    color: var(--colorpolice);
+}
+
 a:visited {
     color: var(--colorpolice);
 }
@@ -60,28 +64,22 @@ span {
 
 /* HEADER */
 
+
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 160px);
+    grid-template-rows: 60px;
 }
-
 header img {
-    width: 120px;
+    height: 60px;
+  
+}
+.linksign, .linkhome, .linkactivity {
+    line-height: 60px;
+    text-align: right;
+    padding-right: 2rem;
 }
 
-.header__nav {
-    display: flex;
-    align-items: flex-start;
-}
-
-.header__nav ul {
-    display: flex;
-}
-
-.header__nav li {
-    margin-right: 1.6rem;
-    
-}
 
 #sign {
     font-weight: 700;
@@ -90,12 +88,10 @@ header img {
 
 /* CHANGEMENT SURVOL LINK */
 
-.header__nav a:hover {
+header a:hover {
     color : var(--colorprimary);
     border-top: 3px solid var(--colorprimary);
-    padding-top: 2rem;
 }
-
 
 /* SECTION SEARCH*/
 
@@ -309,8 +305,6 @@ header img {
     transform: scale(1.1);  
 }
 
-
-
 /* SECTION TOP */
 
 .tophome {
@@ -497,7 +491,7 @@ footer a:hover{
 @media screen and (max-width :1400px) {
 
     .container {
-        margin : 2rem;
+        margin : 2rem ;
     }
 
     /* RESPONSIVE SECTION HOMETOP */
@@ -606,53 +600,72 @@ footer a:hover{
 
 @media screen and (max-width :800px) {
     
-
-    /* RESPONSIVE HEADER */
+    .container{
+        margin: 2rem 0;
+    }
+    /* RESPONSIVE HEADER  */
 
     header {
-        flex-direction: column;
+        grid-template-areas: "logo li2" "li3 li4";
+        grid-template-rows: 60px 60px;
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem 0;
+    }
+
+    header img {
+        grid-row-start: 1;
+        padding-left: 1rem;
+    }
+
+    .linksign {
+        grid-area: li2;
+        text-align: right;
+        line-height: 60px;
+        padding-right: 3rem;
     }
     
-    .header__nav {
+    .linkhome {
+        text-align: center;
+        border-bottom: 3px solid var(--colorbg);
+        padding: 0;
+    }
+
+    .linkactivity{
+        text-align: center;
+        border-bottom: 3px solid var(--colorbg);
+        padding: 0;
+    }
+    
+    .linkactivity:hover, .linkhome:hover {
+        border-top: none;
+        border-bottom: 3px solid var(--colorprimary);
+    }
+
+    .linksign:hover {
+        border-top: none;
+    }
+    
+    
+    /* RESPONSIVE SEARCH  */
+
+    .search {
+        padding-left: 1rem;
+    }
+
+    .btn {
+        display: none;
+    }
+    
+    .btn--small{
+        display: unset;
+    }
+    
+    .search__bar {
         justify-content: center;
     }
     
-    .header__nav li {
-        margin: 1rem ;
-    } 
-
-    .header__nav a:hover {
-        color : var(--colorprimary);
-        border-top: none;
-        border-bottom: 3px solid var(--colorprimary);
-        padding-bottom: 1rem;
-    }
-    
-    /* RESPONSIVE FOOTER  */
-
-    footer {
-        flex-direction: column;
-        justify-content: flex-start;
-        height: auto;
-        padding-bottom: 3rem;
-        margin-top: 2rem;
-        
-    }
-    .footer__bloc {
-        margin-left: 3.75rem ;
-        width: 300px;
-        margin-top: 2rem;
-
-    }
-    footer h3 {
-        margin-top: 0;
-    }
-    
-}
-
-@media screen and (max-width :700px){
-
     /* RESPONSIVE SECTION HOME */
+    
     .grid {
         grid-template-columns: 320px;   
     }
@@ -668,6 +681,19 @@ footer a:hover{
     .home {
         background-color: white
     }
+
+    /* RESPONSIVE TOP */
+    .top img {
+        width: 130px;
+        height: 135px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .tophome {
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+    }
     
     /* RESPONSIVE SECTION ACTIVITY */
     
@@ -680,41 +706,24 @@ footer a:hover{
         grid-area: 1 ;
     }
     
+    /* RESPONSIVE FOOTER  */
 
-    /* RESPONSIVE TOP */
-    .top img {
-        width: 130px;
-        height: 135px;
-        border-radius: 20px 0 0 20px;
-    
-    }
-    /* TEST  */
-
-    .btn {
-        display: none;
+    footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        padding-bottom: 3rem;
+        margin-top: 2rem;    
     }
 
-    .btn--small{
-        display: unset;
+    .footer__bloc {
+        margin-left: 3.75rem ;
+        width: 300px;
+        margin-top: 2rem;
     }
 
-    .tophome {
-        margin: 0;
-        border-radius: 0;
-        width: 100%;
-    }
-    .container{
-        margin: 2rem 0;
+    footer h3 {
+        margin-top: 0;
     }
 
-    header, .search {
-        width: 100%;
-        margin : 0 1rem;
-    }
-
-    .search__bar {
-        justify-content: center;
-    }
-}
-
-
+}      

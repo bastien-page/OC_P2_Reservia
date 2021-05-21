@@ -24,8 +24,8 @@ body {
 }
 
 .container {
-    margin : 3.75rem auto;
     max-width: 1600px;  
+    margin : 3.75rem auto;
 }
 
 h1 {
@@ -70,16 +70,16 @@ header {
     grid-template-columns: 1fr repeat(3, 160px);
     grid-template-rows: 60px;
 }
+
 header img {
     height: 60px;
-  
-}
-.linksign, .linkhome, .linkactivity {
-    line-height: 60px;
-    text-align: right;
-    padding-right: 2rem;
 }
 
+.linksign, .linkhome, .linkactivity {
+    line-height: 60px;
+    padding-right: 2rem;
+    text-align: right;
+}
 
 #sign {
     font-weight: 700;
@@ -105,9 +105,9 @@ header a:hover {
 }
 
 .search__bar p {
-    background-color: var(--colorbg) ;
     height: 50px;
     width: 50px;
+    background-color: var(--colorbg) ;
     border : solid 1px var(--colorbg);
     border-radius: 15px 0 0 15px;
 }
@@ -135,8 +135,6 @@ header a:hover {
 .search__bar input:focus {
     border : solid 2px var(--colorprimary);
 }
-
-
 
 .btn--small {
     display: none;
@@ -246,7 +244,6 @@ header a:hover {
 
 /* SECTION HOME */
 
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 250px);
@@ -257,7 +254,6 @@ header a:hover {
 .home__title, .home__footer {
     grid-column : 1/ span 3;
 }
-
 
 .home__footer:hover{
     text-decoration: underline;
@@ -311,18 +307,16 @@ header a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 1rem;
-    
+    margin-left: 1rem; 
 }
-
 
 .tophome__title  {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 }
+
 .topMedia {
     display: flex;
     flex-direction: column;
@@ -345,13 +339,12 @@ header a:hover {
     flex-direction: row;
 }
 
-
 .top img {
     width: 130px;
     height: 135px;
     border-radius: 20px 0 0 20px;
-
 }
+
 .top__info {
     display: flex;
     flex-direction: column;
@@ -361,8 +354,7 @@ header a:hover {
 }
 
 .top__title, .top__price {
-    padding: 5px 0 0 0;
-    
+    padding: 5px 0 0 0;   
 }
 
 .top__price {
@@ -380,7 +372,6 @@ header a:hover {
 .activities {
     display: flex;
     margin-top: 2rem ;
-
 }
 
 .grid-big {
@@ -402,14 +393,11 @@ header a:hover {
 }
 
 .activity img {
-    
     height: 195px;
-    
 }
 
 .big {
     height: 440px;
- 
 }
 
 .big img {
@@ -455,21 +443,17 @@ header a:hover {
     grid-row: 4 / span 7;
 }
 
-
 /* FOOTER */
 
 footer {
-    background-color: var(--colorbg);
-    height: 200px;
     display: flex;
     justify-content: center;
-    
+    background-color: var(--colorbg);
+    height: 200px;
 }
-
 
 .footer__bloc {
     width: 30%;
-   
 }
 
 footer h3 {
@@ -511,32 +495,35 @@ footer a:hover{
     }
 
     /* RESPONSIVE SECTION TOP */
+    
     .tophome {
         margin: 2rem 0;
         order: -1;
     }
+
     .topMedia {
         display: flex;
         flex-direction: row ;
         justify-content: space-evenly;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;  
     }
+
     .top {
         margin: 1rem; 
     } 
   
-
     /* RESPONSIVE SECTION ACTIVITY */
 
     .activities {
         justify-content: center;
     }
+
     .grid-big {
         grid-template-columns: repeat(3, 300px);
         grid-template-rows: 60px repeat(2,160px);
         grid-gap : 2rem;
     }
+
     .activity__title {
         grid-area: 1 / span 3;
     }
@@ -544,11 +531,12 @@ footer a:hover{
     .big, .activity {
             width: 300px;
             height: 160px;
-        }
+    }
 
     .big img, .activity img {
             height: 105px;
     }
+
     #vieuxPort, #fortDePomegues, #ilesDuFrioul, #parcNationalDesCalanques, #notreDameDeLaGarde, #parcLonchamp {
         grid-area: auto;
     }
@@ -562,25 +550,26 @@ footer a:hover{
     .filter__bloc {
         flex-direction: column;   
     }
+
     .filter__title {
         align-self: flex-start;
-
     }
+
     .filters{
         flex-wrap: wrap;
     }
+
     .filter{
         margin-left: 0;
     }
-
 
     /* RESPONSIVE SECTION HOME*/
 
     .grid {
         grid-template-columns: repeat(2, 250px);
-        grid-gap: 2rem 4rem;
-          
+        grid-gap: 2rem 4rem;    
     }
+
     .home__title, .home__footer {
         grid-column : 1/ span 2;
     }
@@ -592,6 +581,7 @@ footer a:hover{
         grid-template-rows: 60px repeat(3,160px);
         grid-gap : 2rem 4rem;
     }
+
     .activity__title {
         grid-area: 1 / span 2;
     }
@@ -603,6 +593,7 @@ footer a:hover{
     .container{
         margin: 2rem 0;
     }
+
     /* RESPONSIVE HEADER  */
 
     header {
@@ -645,7 +636,6 @@ footer a:hover{
         border-top: none;
     }
     
-    
     /* RESPONSIVE SEARCH  */
 
     .search {
@@ -683,6 +673,7 @@ footer a:hover{
     }
 
     /* RESPONSIVE TOP */
+
     .top img {
         width: 130px;
         height: 135px;

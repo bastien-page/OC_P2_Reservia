@@ -348,6 +348,7 @@ header a:hover {
 .top__info {
     display: flex;
     flex-direction: column;
+    width: 200px;
     padding : 5px;
     padding-left: 15px;
     height: 145px;
@@ -683,7 +684,11 @@ footer a:hover{
         
         margin: 1rem 0;
     }
-    
+
+    .top__info {
+        width: 180px;
+    }
+
     .tophome {
         margin: 0;
         border-radius: 0;

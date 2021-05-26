@@ -446,10 +446,16 @@ header a:hover {
 /* FOOTER */
 
 footer {
-    display: flex;
-    justify-content: center;
     background-color: var(--colorbg);
     height: 200px;
+    
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 1450px;
+    margin: 0 auto;
 }
 
 .footer__bloc {

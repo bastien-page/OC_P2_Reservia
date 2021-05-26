@@ -679,13 +679,11 @@ footer a:hover{
     }
 
     /* RESPONSIVE TOP */
-
-    .top img {
-        width: 130px;
-        height: 135px;
-        border-radius: 20px 0 0 20px;
+    .top {
+        
+        margin: 1rem 0;
     }
-
+    
     .tophome {
         margin: 0;
         border-radius: 0;
@@ -706,9 +704,12 @@ footer a:hover{
     /* RESPONSIVE FOOTER  */
 
     footer {
+        height: auto;
+    }
+
+    .footer {
         flex-direction: column;
         justify-content: flex-start;
-        height: auto;
         padding-bottom: 3rem;
         margin-top: 2rem;    
     }

@@ -190,12 +190,15 @@ header a:hover {
   cursor: pointer;
 }
 
-.filter p {
+.filter__icon {
+  display: flex;
   background-color: var(--colorsecondary);
   border: solid 2px var(--colorsecondary);
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter i {
